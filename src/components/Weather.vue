@@ -3,7 +3,7 @@
   <div>
     <div>
       <div class="flex justify-between w-64 w-full">
-         <div class="w-auto text-sm m-0.5 font-semibold ">{{name || 'Add city ?'}}</div>
+         <div class="w-auto text-sm m-0.5 font-semibold ">{{name || 'Add city :'}}</div>
           <div class="w-auto object-right"> 
             <router-link to="/setting">
               <img src="https://svgsilh.com/svg/1630709-9e9e9e.svg" alt="setting" 
@@ -30,10 +30,10 @@
      {{weather.clouds.all}} %
     </div>
     </div>
-        <div class="flex flex-row">
+       <div class="flex flex-row">
     <div class="flex flex-row h-4 w-40 m-1 rounded-sm text-xs justify-center">
       <h6 class="font-semibold w-14">Humidity</h6>
-     {{weather.main.humidity}} %
+      {{weather.main.humidity}} %
     </div>
     </div>
        <div class=" m-1 rounded-sm text-xs text-center">
@@ -86,5 +86,5 @@ export default {
   },
   components: {},
 };
-//function({data: weather}) { _this.weather = weather}
+
 </script>

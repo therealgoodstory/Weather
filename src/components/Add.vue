@@ -1,5 +1,4 @@
 <template>
-<div>siy :{{(city)}}</div>
 <draggable 
   v-model="city"
   group="people" 
@@ -81,9 +80,6 @@ export default {
     deletecity(index) {
       this.city.splice(index, 1)
       localStorage.city = JSON.stringify(this.city)
-      console.log(index)
-      console.log(this.city)
-      // this.$store.dispatch('updateWither', i)
     },
   },
     mounted() {
@@ -91,16 +87,13 @@ export default {
       this.city = JSON.parse(localStorage.city)
       }
   },
+   watch: {
+    city() {
+      localStorage.city = JSON.stringify(this.city)
+    }
+   }
 }
-//  <i class="bg-gray-400" @click="removeAt(i)"></i>
-//     {{i + 1}} - {{cities.name}}
-    // <button class="text-gray-600 inline-flex items-center ml-8"
-    // v-on:click="deletecity(i)"
-    // >
-    //   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
-    //    <path fill="currentcolor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
-    //   </svg>
-    // </button>
+
 </script>
 
 <style >
