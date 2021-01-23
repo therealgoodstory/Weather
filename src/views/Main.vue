@@ -1,15 +1,16 @@
 <template>
-  
-<Head/>
+
+<Weather />
 </template>
 
 <script>
 
-import Head from '../components/Head.vue'
+import Weather from '../components/Weather.vue'
+
 export default {
   name: 'Main',
   components: {
-    Head
+    Weather
   }
 }
 </script>
