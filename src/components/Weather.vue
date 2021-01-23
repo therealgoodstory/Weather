@@ -3,7 +3,7 @@
   <div>
     <div>
       <div class="flex justify-between w-64 w-full">
-         <div class="w-auto text-sm m-0.5 font-semibold ">{{name || 'Add city'}}</div>
+         <div class="w-auto text-sm m-0.5 font-semibold ">{{name || 'Add city ?'}}</div>
           <div class="w-auto object-right"> 
             <router-link to="/setting">
               <img src="https://svgsilh.com/svg/1630709-9e9e9e.svg" alt="setting" 
